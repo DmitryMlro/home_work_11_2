@@ -1,7 +1,7 @@
 from inspect import isgenerator
 
 
-def generate_cube_numbers(end):
+def generate_cube_numbers(end: int) -> Generator[int, None, None]:
     """
     Генератор, який створює числа у кубі, починаючи з 2, поки значення менше або дорівнює end
 
@@ -11,9 +11,9 @@ def generate_cube_numbers(end):
     Yields:
         int: куб числа, якщо він <= end
     """
-    number = 2
+    number: int = 2
     while True:
-        cub = number ** 3
+        cub: int = number ** 3
         if cub > end:
             return
         yield cub
